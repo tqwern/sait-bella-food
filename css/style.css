@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.header {
+  display: flex; /*выводит контент в однку строку*/
+  align-items: center; /*элементы выравниваються по центру относительно другого*/
+  justify-content: space-between; /*элементы занимают максимальное растояние, в этом случае логотип будет слева, пункты меню справа*/
+  padding: 30px 15px; /*внутренние отступы 30 сверху и низу, 15 справо и снизу*/
+  max-width: 1330px;
+  margin: 0 auto; /*выравнивание по центру (снизу и сверху 0, чправо и слева auto(по центру))*/
+}
+
+.menu {
+    display: flex; /*выводит контент в одну строку*/
+    list-style: none; /*для того чтобы пропали маркеры списка*/
+}
+
+.menu li { /*отзначает, что будет применено для тега li  класса menu*/
+    margin-left: 94px; /*отступ слева от элемента*/
+}
+
+.menu li a { /*будет применено для тега <a> котрый находиться внуртри <li>*/
+    color: #252B42;
+    text-decoration: none;
+}
+
+.menu li a:hover { /*будет применено для тега <a> котрый находиться внуртри <li>. hover - это псевдокласс, который отвечает за наведение указателя мыши*/
+    color: #FA4A0C; 
+}
+
+.download_wrap {
+    background: url(../img/bg-app.png) center center no-repeat; /*картинку сделаем фоном и поместим по центру как по вертекали, так и по горизонтали, а так же чтобы картинка не повторялась*/
+    background-size: cover; /*указываем размер для фонового изображения.*/
+    padding: 75px 0 145px 0; /*задаём внутренние отступы для секции (сверху по часовой стрелке (сверху-справо-снизу-слево))*/
+}
+.download {
+    color: white; /*цвет текста*/
+    text-align: center; /*выравнивание текста по центру*/
+
+}
+.wrap { 
+    max-width: 1080px; /*маскимальная ширина*/
+    min-width: 320px; /*минимальная ширина*/
+    margin: 0 auto; /*выравние блока с текстом по центру*/
+    padding: 0 15px; /*внуренние отступы для блока с текстом, для того, чтобы при уменьшении размера экрана блок не прилипал к краю*/
+    box-sizing: border-box; /*для того чтобы padding учитывался по всей ширине*/
+}
+
+.download_txt {
+    font-weight: 700; /*толщина шрифта*/
+    font-size: 1.5rem; /*размер шрифта*/
+    line-height: 2rem; /*межстрочный интрвал*/
+    margin-bottom: 20px; /*внешний отступ снизу*/
+}
+
+.download_title {
+    font-weight: 700; /*толщина шрифта*/
+    font-size: 3rem; /*размер шрифта*/
+    line-height: 5rem; /*межстрочный интрвал*/
+    margin-bottom: 30px; /*внешний отступ снизу*/
+}
+
+.download_subtitle {
+    font-weight: 500; /*толщина шрифта*/
+    font-size: 1.5rem; /*размер шрифта*/
+    line-height: 2rem; /*межстрочный интрвал*/
+    margin-bottom: 60px; /*внешний отступ снизу*/
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid white; /*толщина рамки вокруг кнопки*/
+    border-radius: 30px; /*закруглённые рамки*/
+    padding: 16px 60px; /*отступы внутренние у кнопок*/
+    display: inline-block; /*чтобы кнопки стали блоками в линию*/
+    margin: 0 15px; /*внешние отступы*/
+}
+
+.btn_red {
+    border-color: #FA4A0C;
+    background: #FA4A0C;
+}
+
+.workapp_wrap {
+    padding: 50px 0;
+}
+
+.parttitle{
+    font-size: 2.75rem;
+    font-weight: 600;
+    text-align: center; /*выравнивание текста по центру*/
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.workapp-item{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 100px;
+}
+
+.workapp_img{
+    width: 47%; 
+    text-align: center;
+}
+
+.workapp_txt{
+    width: 50%;
+}
+
+.workapp_txt h3{
+    color: #FA4A0C; 
+    font-weight: 700; 
+    font-size: 1.5rem; 
+    line-height: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.workapp_txt h2{
+    color: #252B42;
+    font-weight: 700;
+    font-size: 2.5rem; 
+    line-height: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.workapp_txt{
+    font-weight: 500; 
+    font-size: 1.5rem; 
+    line-height: 2.375rem;
+}
+
+.workapp-item:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.workapp-ite:last-child {
+    margin-bottom: 0;
+}
+
+.footer_wrap {
+    padding: 70px 0;
+}
+
+.footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    color: #5C5C5C; 
+    font-size: 0.75rem; 
+    font-weight: 700;
+}
+
+@media (max-width:800px){ /*оптимимизация дизайна сайта, управляют стилями, ориентируясь на технические параметры устройств.*/
+    .header {
+        flex-direction: column;
+    }
+    .logo {
+        margin-bottom: 30px;
+    }
+    .menu li {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .download_txt {
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    .download_title {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+    .download_subtitle {
+        font-size: 1.25;
+    }
+    .download_wrap {
+        padding: 40px 0 70px 0;
+    }
+    .parttitle {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    .workapp-item {
+        flex-direction: column-reverse;
+    }
+    .download_txt, .workapp_img {
+        width: 100%;
+    }
+    .workapp_txt h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+@media (mix-width:600px) {
+    .btn {
+        display: block; /*блочные элементы располагаются один над другим, вертикально */
+        margin: 30 auto; /*внешний отступ по вертиали и "auto" горизонтали*/
+        width: 290px;
+        box-sizing: border-box;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer img {
+        margin-bottom: 30px;
+    }
+    .footer_wrap {
+        padding: 30px 0;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .menu li {
+        margin: 10px 15px;
+    }
+}
