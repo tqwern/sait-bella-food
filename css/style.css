@@ -205,7 +205,7 @@ body {
     }
 }
 
-@media (mix-width:600px) {
+@media (min-width:600px) {
     .btn {
         display: block; /*блочные элементы располагаются один над другим, вертикально */
         margin: 30 auto; /*внешний отступ по вертиали и "auto" горизонтали*/
